@@ -1,0 +1,125 @@
+.navbar{
+    min-height: 14vh;
+}
+
+
+.logo{
+    font-size: 1.8rem;
+    color: var(--text-primary-clr);
+    font-weight: bold;
+}
+.logo span{
+    display: inline-block;
+    background-color: var(--accent-clr);
+    color: var(--background-clr);
+    width: 2.8rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    text-align: center;
+    margin-right: .4rem;
+}
+
+.links{
+    font-size: .95rem;
+    color: var(--text-secondary-clr);
+    transition: .5s ease-in-out;
+}
+
+.links:hover{
+    color: var(--accent-clr);
+}
+.gap-2{
+    gap: 2rem;
+}
+
+.btn{
+    padding: .7rem 1.4rem;
+    background-color: var(--accent-clr);
+    color: var(--background-clr);
+    font-weight: bold;
+    font-size:  .9rem;
+    border-radius: 100vw;
+    /* border: 1px solid var(--accent-clr);  */
+    transition: .5s ease-in-out;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--accent-clr);
+    cursor: pointer;
+}
+
+.icon-container{
+    width: 2.7rem;
+    aspect-ratio: 1;
+    /* background: red; */
+    border-radius: 100vh;
+    font-size: 1.4rem;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-inverse{
+    border: .1rem solid rgba(123, 123, 123, 0.2);
+    color: var(--text-secondary-clr);
+
+}
+
+.hamburger{
+    color: var(--text-primary-clr);
+    font-size: 1.5rem;
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:790px){
+    .desktop-menu,
+    .nav-actions .btn{
+        display: none;
+    } 
+    .hamburger{
+        display: block;
+    }
+
+    .logo{
+        font-size: 1.6rem;
+    }
+    .logo span{
+        width: 2.5rem;
+        margin-right: .2rem;
+
+    }
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+        left: -100%;
+        transform: translateX(-50%);
+        justify-content: center;
+        gap: 2rem;
+        border-radius: 1rem;
+        align-items: center;
+        background-color: rgba(var(--surface-clr), 0.2);
+        backdrop-filter: blur(20px);
+        border: .1rem solid rgba(123, 123, 123, 0.2);
+        width: 20rem;
+        padding: 1.5rem;
+        z-index: 99;
+        transition: 0.5s ease-in-out;
+
+
+    }
+    .mobile-menu-active{
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
