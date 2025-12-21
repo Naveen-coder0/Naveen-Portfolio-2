@@ -29,7 +29,7 @@ const ProjectData =[
     {
         id:1,
         title:"Project Title 1",
-        decri
+        decri:"jo"
          
     }
 ]
