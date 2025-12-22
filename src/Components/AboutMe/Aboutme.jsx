@@ -3,6 +3,7 @@ import './Aboutme.css'
 import aboutimg from '../../assets/about-image.png'
 import CV from '../../assets/naveen resume.pdf'
 
+
 const Aboutme = () => {
   return (
     <section>

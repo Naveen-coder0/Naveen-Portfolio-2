@@ -1,0 +1,22 @@
+.project-image,
+.project-content{
+    flex: 1;
+
+}
+.project-image{
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.rotate{
+    transform: rotate(-45deg);
+}
+
+
+.h3{
+    font-size: 2rem;
+    color: var(--text-primary-clr);
+}
+
+.project:nth-child(even){
+    flex-direction: row-reverse;
+}

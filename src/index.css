@@ -56,3 +56,7 @@ img{
 .p-block-9{
   padding-block: 9rem;
 }
+
+.column{
+  flex-direction: column;
+}

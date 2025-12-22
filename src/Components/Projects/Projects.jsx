@@ -1,35 +1,90 @@
 import React from 'react'
 import './Projects.css'
+import Project1 from '../../assets/project1.jpg'
+import Project2 from '../../assets/project2.jpg'
+import Project3 from '../../assets/project3.jpg'
+import { FaArrowRight } from "react-icons/fa";
+
+const projectData = [
+  {
+    id: 1,
+    title: "Smart Financial Dashboard",
+    description:
+      "A modern, user-friendly dashboard for tracking income, expenses, analytics, and card details with quick transfer and activity summaries.",
+    image: Project1,
+    tech: ['React JS', 'MUI', 'Chart']
+  },
+  {
+    id: 2,
+    title: "E-Commerce Web App",
+    description:
+      "A responsive e-commerce platform with product listings, cart functionality, and smooth checkout experience.",
+    image: Project2,
+    tech: ['React JS', 'Redux', 'Stripe']
+  },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio showcasing projects, skills, and experience with clean UI and smooth animations.",
+    image: Project3,
+    tech: ['React JS', 'Framer Motion', 'CSS']
+  }
+]
 
 const Projects = () => {
   return (
     <section>
-        <div className='wrapper p-block-9'>
-            <div className='flex between gap-4'>
-                <div>
-                    <span className="sub-text">My Portfolio</span>
-                    <h2>
-                      let's have a lock <br /> at <span className='text-green'>My Portfolio</span>
-                    </h2>
+      <div className="wrapper p-block-9">
 
-                </div>
-                <a href="" className='btn'>View All Projects</a>
+        {/* HEADER */}
+        <div className="flex between gap-4">
+          <div>
+            <span className="sub-text">My Portfolio</span>
+            <h2>
+              Let&apos;s have a look <br />
+              at <span className="text-green">My Portfolio</span>
+            </h2>
+          </div>
+
+          <a href="#" className="btn">View All Projects</a>
+        </div>
+
+        
+        <div className="flex column gap-2 mt-5">
+          {projectData.map(project => (
+            <div className="card flex gap-5 project" key={project.id}>
+
+              
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+
+            
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p className="para">{project.description}</p>
+
+                {/* <div className="tech-stack">
+                  {project.tech.map((tech, index) => (
+                    <span key={index} className="tech">
+                      {tech}
+                    </span>
+                  ))}
+                </div> */}
+
+                <a href="#" className="icon-container border-inverse rotate">
+                  <FaArrowRight />
+                </a>
+              </div>
 
             </div>
-
+          ))}
         </div>
+
+      </div>
     </section>
   )
 }
 
 export default Projects
-
-
-const ProjectData =[
-    {
-        id:1,
-        title:"Project Title 1",
-        decri:"jo"
-         
-    }
-]
