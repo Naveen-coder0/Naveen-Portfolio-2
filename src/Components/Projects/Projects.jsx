@@ -50,32 +50,36 @@ const Projects = () => {
           <a href="#" className="btn">View All Projects</a>
         </div>
 
-        
+
         <div className="flex column gap-2 mt-5">
           {projectData.map(project => (
             <div className="card flex gap-5 project" key={project.id}>
 
-              
+
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
               </div>
 
-            
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p className="para">{project.description}</p>
 
-                {/* <div className="tech-stack">
-                  {project.tech.map((tech, index) => (
-                    <span key={index} className="tech">
-                      {tech}
-                    </span>
-                  ))}
-                </div> */}
+              <div className="project-content">
+
+                <div
+                  className="flex gap-1"
+                  style={{ marginTop: '-2rem' }}   // 👈 move up (adjust value)
+                >
+                  <a href="#" className="btn">{project.tech[0]}</a>
+                  <a href="#" className="btn">{project.tech[1]}</a>
+                  <a href="#" className="btn">{project.tech[2]}</a>
+                </div>
+
+                <h3>{project.title}</h3>
+
+                <p className="para">{project.description}</p>
 
                 <a href="#" className="icon-container border-inverse rotate">
                   <FaArrowRight />
                 </a>
+
               </div>
 
             </div>

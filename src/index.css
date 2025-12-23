@@ -60,3 +60,7 @@ img{
 .column{
   flex-direction: column;
 }
+
+.gap-1{
+  gap: .55rem;
+}
